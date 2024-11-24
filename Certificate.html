@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-purple-900 to-pink-900 text-white min-h-screen">
+
+    <!-- Header Section -->
+ 
+    <!-- Main Content -->
+    <div class="container mx-auto py-12 px-6">
+        <h1 class="text-4xl font-bold mb-4">Certificate</h1>
+        <p class="text-lg text-gray-300 mb-8">กำลังหามาใส่...</p>
+        <div class="space-y-6">
+            <!-- Certificate Item -->
+            <div class="p-6 bg-purple-800 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">กำลังหามาใส่...</h2>
+                    <p class="text-sm text-gray-300">กำลังหามาใส่...</p>
+                </div>
+                <button onclick="showCertificate('certificate1')" class="text-blue-300 hover:underline">ดูเกียรติบัตร</button>
+            </div>
+
+            <!-- Certificate Item -->
+            <div class="p-6 bg-purple-800 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">กำลังหามาใส่...</h2>
+                    <p class="text-sm text-gray-300">กำลังหามาใส่...</p>
+                </div>
+                <button onclick="showCertificate('certificate2')" class="text-blue-300 hover:underline">ดูเกียรติบัตร</button>
+            </div>
+
+            <!-- Certificate Item -->
+            <div class="p-6 bg-purple-800 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">กำลังหามาใส่...</h2>
+                    <p class="text-sm text-gray-300">กำลังหามาใส่...</p>
+                </div>
+                <button onclick="showCertificate('certificate3')" class="text-blue-300 hover:underline">ดูเกียรติบัตร</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for showing certificate -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-4 rounded-lg relative max-w-lg w-full">
+            <button onclick="hideCertificate()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
+            <img id="certificate-image" src="" alt="Certificate" class="rounded-lg max-w-full h-auto mx-auto">
+        </div>
+    </div>
+    
+  <footer class=" py-4 mt-12">
+        <div class="text-center">© 2024 Phanloed Pongpatrud. All rights reserved.</div>
+    </footer>
+
+
+    <script>
+        // Function to show certificate
+        function showCertificate(id) {
+            const modal = document.getElementById('modal');
+            const image = document.getElementById('certificate-image');
+
+            // Map certificate IDs to image paths
+            const certificates = {
+                'certificate1': '/path/to/your/certificate1.png', // Replace with actual path
+                'certificate2': '/path/to/your/certificate2.png',
+                'certificate3': '/path/to/your/certificate3.png'
+            };
+
+            image.src = certificates[id]; // Set the image source
+            modal.classList.remove('hidden'); // Show the modal
+        }
+
+        // Function to hide certificate
+        function hideCertificate() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>

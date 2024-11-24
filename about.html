@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center shadow p-4 px-8 max-w-7xl mx-auto rounded-lg bg-gray-800">
+        <h1 class="text-lg font-bold">Phanloed</h1>
+        <div class="flex space-x-4">
+            <div class="flex gap-4">
+                <!-- Certificate -->
+                <button class="p-2 bg-blue-100 rounded-full hover:bg-blue-200">
+                    <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                </button>
+                <!-- Discord -->
+                <a href="https://discord.gg/k9XyQ3T3vh" target="_blank" class="p-2 bg-purple-100 rounded-full hover:bg-purple-200">
+                    <i class="fab fa-discord text-purple-600 text-xl"></i>
+                </a>
+                <!-- Git -->
+                <a href="https://github.com/Richkyl3" target="_blank" class="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
+                    <i class="fab fa-github text-gray-600 text-xl"></i>
+                </a>
+                <!-- About Me -->
+                <a href="about.html" class="p-2 bg-green-100 rounded-full hover:bg-green-200">
+                    <i class="fas fa-user text-green-600 text-xl"></i>
+                </a>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 bg-yellow-100 rounded-full hover:bg-yellow-200">
+                    <i id="theme-icon" class="fas fa-sun text-yellow-600 text-xl"></i> <!-- Default to Sun Icon -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6 max-w-4xl">
+        <h1 class="text-4xl font-bold text-start mb-2">About Me</h1>
+        <p class="text-md text-gray-400 mb-6">ข้อมูลเกี่ยวกับผม</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div class="space-y-4">
+                <p class="text-lg"><strong>ชื่อจริง:</strong> พันเลิศ พงศ์พัทธ์รุจ</p>
+                <p class="text-lg"><strong>วันเกิด:</strong> วันอังคารที่ 8 เดือนตุลาคม พ.ศ.2545</p>
+                <p class="text-lg"><strong>สถานะ:</strong> มีแฟนแล้ว</p>
+                <p class="text-lg"><strong>สิ่งที่ชอบ:</strong> เทคโนโลยี, กีฬา, music</p>
+            </div>
+            <div class="space-y-4">
+                <p class="text-lg"><strong>ชื่อเล่น:</strong> อาร์ม</p>
+                <p class="text-lg"><strong>อาศัยอยู่ที่:</strong> นครราชสีมา ประเทศไทย</p>
+                <p class="text-lg"><strong>ศึกษาอยู่ที่:</strong> มทส.</p>
+                <p class="text-lg"><strong>อาหารที่ชอบ:</strong> หลายอย่าง</p>
+            </div>
+        </div>
+        <a href="index.html" class="text-blue-400 hover:underline mt-8 inline-block">Back</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="py-4 mt-12">
+        <div class="text-center text-gray-500">© 2024 Phanloed Pongpatrud. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // Toggle the theme on button click
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check if dark mode is saved in localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'light'); // Save theme as light
+            } else {
+                body.classList.add('dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'dark'); // Save theme as dark
+            }
+        });
+    </script>
+
+</body>
+</html>

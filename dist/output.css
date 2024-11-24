@@ -1,0 +1,157 @@
+/* styles.css */
+
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+header {
+  text-align:left;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-projects-btn {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-content h2 {
+  font-size: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: #444;
+  color: #1db954;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stack-item {
+  background-color: #444;
+  color: #1db954;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid;
+  padding:   10px 20px 10px 20px;
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Social Links Section */
+
+.social-links {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.social-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #444;
+}
+
+.social-item:last-child {
+  border-bottom: none;
+}
+
+.social-item span {
+  font-size: 1rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #1db954;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #1fdf64;
+}
